@@ -21,12 +21,12 @@ let i_or_d; // condition of the current experiment
 let total_tn = 0; // total trial index
 let tn = 0; // trial number (to count), reset at the beggining of each blocks
 let prac_tn = 0;
-let trial_n_block = 2; // the number of whole trials in each blocks
-let trial_n_prac = 1; // the number of whole practice trials
+let trial_n_block = 75; // the number of whole trials in each blocks
+let trial_n_prac = 15; // the number of whole practice trials
 let bn = 1; // block number (to count)
 let block_n = 4; // the number of whole blocks
 let vec = [0 ,1, 2, 3];
-let choice_duration = 2000;
+let choice_duration = 1500;
 let spin_duration = 3000;
 let outcome_duration = 1000;
 let ul_stim; // upper left stimulus
