@@ -425,7 +425,8 @@ const rest = {
 // timeline for the end of the experiment
 const end_exp = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "<p class='inst_text'>これで実験は終了です。お疲れさまでした。<br>「実験後の質問紙」に回答するのを忘れないようにお願いいたします。<br><b>必ずスペースキーを押して，画面が真っ暗になったのを確認してから</b>，画面を閉じてください。</p>",
+    stimulus: "<p class='inst_text'>これで実験は終了です。お疲れさまでした。<br>「実験後の質問紙」に回答するのを忘れないようにお願いいたします。<br><b>スペースキーを押して，"  +
+        "必ず画面が真っ暗になったのを確認してから</b>，画面を閉じてください。<br>灰色のローディングマークが中央で回っている間は，データ転送中ですので，画面を消さないでください。</p>",
     choices: [" "]
 };
 
