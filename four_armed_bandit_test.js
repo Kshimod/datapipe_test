@@ -424,11 +424,8 @@ const rest = {
 
 // timeline for the end of the experiment
 const end_exp = {
-    on_start: function() {
-        filename = `${participantID}_${exp_num}.csv`;
-    },
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "これで実験は終了です。お疲れさまでした。<br>「実験後の質問紙」に回答するのを忘れないようにお願いいたします。<br><b>必ずスペースキーを押して，画面が真っ暗になったのを確認してから</b>，画面を閉じてください。",
+    stimulus: "<p class='inst_text'>これで実験は終了です。お疲れさまでした。<br>「実験後の質問紙」に回答するのを忘れないようにお願いいたします。<br><b>必ずスペースキーを押して，画面が真っ暗になったのを確認してから</b>，画面を閉じてください。</p>",
     choices: [" "]
 };
 
@@ -480,7 +477,10 @@ const save_data = {
     type: jsPsychPipe,
     action: "save",
     experiment_id: "lIwnUjypaHPU",
-    filename: filename,
+    filename: function() {
+        filename = `${participantID}_${exp_num}.csv`;
+        return(filename);
+    },
     data_string: ()=>jsPsych.data.get().csv()
   };
 
